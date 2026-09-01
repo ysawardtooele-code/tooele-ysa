@@ -1,18 +1,21 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import { LeaderCard } from "@/components/leader-card";
-import { MissionariesBlock } from "@/components/missionaries-block";
-import { leaderCardsQuery } from "@/lib/sanity/queries";
-import type { LeaderCardsQueryResult } from "@/lib/types";
+import { LeaderCard } from '@/components/leader-card';
+import { MissionariesBlock } from '@/components/missionaries-block';
+import { leaderCardsQuery } from '@/lib/sanity/queries';
+import type { LeaderCardsQueryResult } from '@/lib/types';
 
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Contacts — Tooele YSA Ward",
+  title: 'Contacts — Tooele YSA Ward',
 };
 
 function hasSanityEnv() {
-  return Boolean(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NEXT_PUBLIC_SANITY_DATASET);
+  return Boolean(
+    process.env.NEXT_PUBLIC_SANITY_PROJECT_ID &&
+    process.env.NEXT_PUBLIC_SANITY_DATASET,
+  );
 }
 
 async function getLeaderCards(): Promise<LeaderCardsQueryResult> {
@@ -21,7 +24,7 @@ async function getLeaderCards(): Promise<LeaderCardsQueryResult> {
   }
 
   try {
-    const { client } = await import("@/lib/sanity/client");
+    const { client } = await import('@/lib/sanity/client');
 
     return await client.fetch(leaderCardsQuery);
   } catch {
@@ -34,34 +37,55 @@ export default async function ContactsPage() {
 
   return (
     <>
-      <section aria-labelledby="contacts-heading" className="bg-surface text-on-surface">
-        <div className="mx-auto w-full max-w-container-max px-container-px py-section-v-mobile lg:px-container-px-lg lg:py-section-v">
-          <div className="max-w-3xl">
-            <p className="text-section-label tracking-[0.14em] text-on-surface-muted">CONTACTS</p>
-            <h1 id="contacts-heading" className="mt-stack-sm text-headline-mobile md:text-headline">
+      <section
+        aria-labelledby='contacts-heading'
+        className='bg-surface text-on-surface'
+      >
+        <div className='mx-auto w-full max-w-container-max px-container-px py-section-v-mobile lg:px-container-px-lg lg:py-section-v'>
+          <div className='max-w-3xl'>
+            <p className='text-section-label tracking-[0.14em] text-on-surface-muted'>
+              GET CONNECTED
+            </p>
+            <h1
+              id='contacts-heading'
+              className='mt-stack-sm text-headline-mobile md:text-headline'
+            >
               Reach Out to the Tooele YSA Ward
             </h1>
-            <p className="mt-stack-md text-body-lg text-on-surface-muted">
-              Whether you have a question, need a ride, or want to know where to go next, our ward leaders and
-              missionaries are here to help. Find the right person to contact below.
+            <p className='mt-stack-md text-body-lg text-on-surface-muted'>
+              Whether you have a question, need a ride, or want to know where to
+              go next, our ward leaders and missionaries are here to help. Find
+              the right person to contact below.
+            </p>
+            <p className='mt-stack-md text-body-lg text-on-surface-muted'>
+              For access to a ward contact list download and sign in to the
+              Member Tools app (can be found on our links page).
             </p>
           </div>
         </div>
       </section>
 
-      <section aria-labelledby="leadership-heading" className="bg-surface-warm text-on-surface">
-        <div className="mx-auto w-full max-w-container-max px-container-px py-section-v-mobile lg:px-container-px-lg lg:py-section-v">
-          <div className="max-w-3xl">
-            <p className="text-section-label tracking-[0.14em] text-on-surface-muted">CONTACTS</p>
-            <h2 id="leadership-heading" className="mt-stack-sm text-headline-mobile md:text-headline">
+      <section
+        aria-labelledby='leadership-heading'
+        className='bg-surface-warm text-on-surface'
+      >
+        <div className='mx-auto w-full max-w-container-max px-container-px py-section-v-mobile lg:px-container-px-lg lg:py-section-v'>
+          <div className='max-w-3xl'>
+            <p className='text-section-label tracking-[0.14em] text-on-surface-muted'>
+              CONTACTS
+            </p>
+            <h2
+              id='leadership-heading'
+              className='mt-stack-sm text-headline-mobile md:text-headline'
+            >
               OUR LEADERSHIP
             </h2>
-            <p className="mt-stack-md text-body-lg text-on-surface-muted">
-              Reach out to ward leaders when you need help connecting, have a question, or want to know where to go next.
+            <p className='mt-stack-md text-body-lg text-on-surface-muted'>
+              Bishopric, Auxiliary Presidents, and Building Coordinator.
             </p>
           </div>
           {leaderCards.length > 0 ? (
-            <div className="mt-stack-lg grid grid-cols-1 gap-stack-md sm:grid-cols-2 lg:grid-cols-3">
+            <div className='mt-stack-lg grid grid-cols-1 gap-stack-md sm:grid-cols-2 lg:grid-cols-3'>
               {leaderCards.map((leader) => (
                 <LeaderCard
                   key={leader._id}
@@ -73,7 +97,9 @@ export default async function ContactsPage() {
               ))}
             </div>
           ) : (
-            <p className="mt-stack-lg text-body text-on-surface-muted">Leadership information will be added soon.</p>
+            <p className='mt-stack-lg text-body text-on-surface-muted'>
+              Leadership information will be added soon.
+            </p>
           )}
         </div>
       </section>
