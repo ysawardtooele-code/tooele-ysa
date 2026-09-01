@@ -45,11 +45,12 @@ export function Hero({ heroImage }: HeroProps) {
             TOOELE YSA WARD
           </p>
           <h1 className='mt-stack-sm text-display-mobile tracking-[0.02em] text-on-primary md:text-display'>
-            Loving God and His People
+            Loving God{' '}
+            <span className='whitespace-nowrap'>and His People</span>
           </h1>
-          <h2 className='mt-stack-sm text-display-mobile tracking-[0.02em] text-on-surface-muted md:text-display text-sm'>
+          <sub className='mt-stack-sm text-xs tracking-[0.02em] text-on-primary'>
             Matthew 22
-          </h2>
+          </sub>
           <div className='mt-stack-lg flex flex-col gap-4 sm:flex-row'>
             <a
               href={directionsUrl}

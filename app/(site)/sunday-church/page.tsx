@@ -88,9 +88,9 @@ export default async function SundayChurchPage() {
               Gather With Us on Sundays
             </h1>
             <p className='mt-stack-md text-body-lg text-on-surface-muted'>
-              Come worship with other young single adults in Tooele. Sacrament
-              meeting begins at 11:00 AM, with second-hour classes following
-              afterward.
+              Come worship with other young single adults (YSA 18-35) in Tooele.
+              Sacrament meeting begins at 11:00 AM, with second-hour classes
+              following afterward.
             </p>
             <div className='mt-stack-lg grid gap-stack-md border-l-4 border-accent-rust pl-stack-md text-body-lg'>
               <p>
@@ -361,17 +361,20 @@ export default async function SundayChurchPage() {
             </h2>
             <div className='mt-stack-md space-y-stack-md text-body-lg text-on-surface-muted'>
               <p>
-                Parking is available around the chapel at 196 N Pinehurst Ave.
-                Come in through the main entrance and look for a greeter or
-                another YSA member if you want help finding the chapel or
+                Parking is available on the east side of the meetinghouse at 196
+                N Pinehurst Ave. Enter through the main entrance or the back
+                door attached to the Cultural Hall, and look for a greeter or
+                another YSA member if you’d like help finding the chapel or
                 classrooms.
               </p>
               <p>
                 A YSA sacrament meeting includes hymns, prayers, the sacrament,
-                and short talks from ward members. Dress ranges from Sunday best
-                to simple and comfortable. You can sit anywhere, participate as
-                much as you feel comfortable, and stay afterward for second-hour
-                classes and introductions.
+                and short talks from ward members. You’re welcome to wear
+                whatever you feel comfortable in. Most men wear suits or
+                button-up shirts and ties; women typically wear dresses or
+                skirts. You can sit anywhere, participate as much as you feel
+                comfortable, and stay afterward for Linger Longer and
+                introductions.
               </p>
             </div>
           </div>
