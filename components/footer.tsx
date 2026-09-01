@@ -9,7 +9,7 @@ export function Footer() {
     <footer className='border-t border-white/10 bg-primary text-white'>
       <div className='mx-auto flex max-w-container-max flex-col gap-8 px-container-px py-10 lg:px-container-px-lg'>
         <p className='text-headline-mobile text-accent-teal'>
-          Together in Christ
+          Loving God and His People
         </p>
         <nav aria-label='Footer' className='flex flex-wrap gap-x-6 gap-y-3'>
           {siteLinks.map((link) => (
