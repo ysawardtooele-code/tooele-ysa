@@ -310,7 +310,7 @@ export default async function SundayChurchPage() {
               <ul className='mt-stack-sm space-y-stack-sm text-body text-on-surface-muted'>
                 <li className='whitespace-nowrap'>
                   <strong className='text-on-surface'>
-                    Sacrament meeting:
+                    Sacrament Meeting:
                   </strong>{' '}
                   Chapel
                 </li>
@@ -335,7 +335,7 @@ export default async function SundayChurchPage() {
                   Relief Society
                 </li>
                 <li className='whitespace-nowrap'>
-                  <strong className='text-on-surface'>Elders quorum:</strong>{' '}
+                  <strong className='text-on-surface'>Elders Quorum:</strong>{' '}
                   Chapel
                 </li>
               </ul>
