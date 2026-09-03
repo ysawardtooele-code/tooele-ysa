@@ -59,7 +59,7 @@ export default async function ContactsPage() {
             </p>
             <p className='mt-stack-md text-body-lg text-on-surface-muted'>
               For access to a ward contact list download and sign in to the
-              Member Tools app (can be found on our links page).
+              Member Tools app (can be found on our "LINKS" page).
             </p>
           </div>
         </div>
