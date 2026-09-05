@@ -320,7 +320,7 @@ export default async function SundayChurchPage() {
                 </li>
                 <li className='whitespace-nowrap'>
                   <strong className='text-on-surface'>
-                    Gospel Principles:
+                    Gospel Foundations:
                   </strong>{' '}
                   Relief Society
                 </li>
