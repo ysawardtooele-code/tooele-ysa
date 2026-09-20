@@ -328,7 +328,7 @@ export default async function SundayChurchPage() {
                   <strong className='text-on-surface'>
                     Temple Preparation:
                   </strong>{' '}
-                  Primary
+                  Room 1
                 </li>
                 <li className='whitespace-nowrap'>
                   <strong className='text-on-surface'>Relief Society:</strong>{' '}
