@@ -95,7 +95,7 @@ export default function LinksPage() {
               id='link-tree-heading'
               className='mt-stack-sm text-headline-mobile md:text-headline'
             >
-              Open Your Go-To LDS Apps
+              Open Your Go-To YSA Apps
             </h2>
             <p className='mt-stack-md text-body-lg text-on-surface-muted'>
               Jump straight to scripture study, young adult resources, member
